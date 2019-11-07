@@ -1,0 +1,36 @@
+# SOBRE A ESTRUTURA DO NOSSO PROJETO
+
+# node_modules: Esse diretório é onde ficará as dependências de nosso projeto.
+
+# public: Onde ficará todos os arquivos que vão ser acessíveis diretamente pelos usuários finais de nossa aplicação.
+
+# src: Onde ficará todo nosso código da aplicação.
+
+# package.json: Onde ficarão as nossas dependências. De início, temos três:
+  - react: o próprio react;
+  - react-dom: integração do react para web, para ele controlar a árvore de elementos do html;
+  - react-scripts: em si, é o create-react-app, aquele que é responsével por fazer todo papel de transpilação.
+
+Agora, vamos falar sobre o projeto. 
+
+# src/index.js: Neste arquivo, temos alguns imports...
+  - import React from 'react';
+    Aqui, nós temos essa variável "React" que não está sendo utilizada. Porém, temos que fazer uso do React para
+  utilizarmos o JSX.
+  - import ReactDOM from 'react-dom';
+    Utilizamos o ReactDOM para fazer uso do método ".render()", que é uma função que vamos utilizar apenas
+  uma única vez em toda nossa aplicação. Ele renderiza nosso primeiro componente para uma "div root" no nosso html.
+
+  Podemos perceber que, um componente é um conjunto de:
+    - parte visual (nosso html, parte estrutural);
+    - parte de código JS;
+    - parte de estilização (parte CSS).
+
+  Todo componente tem um método obrigatório, que é o "render()". Ele obrigatoriamente precisa retornar um conteúdo JSX.
+  Para todo componente, criamos uma pasta com o nome do tal, e dentro dele, os arquivos separados de js e css.
+
+# src/services: armazena qualquer arquivo que nos dê as configurações para conexão com serviços externos, para
+recebermos ou enviar dados.
+
+OBS: Quando criamos funções próprias, nós utilizamos o modelo de arrow functions, já que estas não sobrescrevem
+o valor do "this", continuando assim, a manter o valor do escopo fora da função.
